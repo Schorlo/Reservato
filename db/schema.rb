@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_27_122945) do
+ActiveRecord::Schema.define(version: 2018_08_27_105154) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,18 +19,18 @@ ActiveRecord::Schema.define(version: 2018_08_27_122945) do
     t.string "comment"
     t.datetime "datetime"
     t.integer "seats"
+    t.bigint "user_id"
+    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id"
-    t.bigint "restaurants_id"
-    t.index ["restaurants_id"], name: "index_reservations_on_restaurants_id"
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string "name"
     t.string "address"
-    t.integer "phone"
+    t.string "phone"
     t.string "email"
     t.string "category"
     t.string "country"
@@ -43,12 +43,12 @@ ActiveRecord::Schema.define(version: 2018_08_27_122945) do
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "content"
+    t.bigint "user_id"
+    t.bigint "restaurant_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "restaurants_id"
-    t.bigint "users_id"
-    t.index ["restaurants_id"], name: "index_reviews_on_restaurants_id"
-    t.index ["users_id"], name: "index_reviews_on_users_id"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,8 +66,8 @@ ActiveRecord::Schema.define(version: 2018_08_27_122945) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "reservations", "restaurants", column: "restaurants_id"
+  add_foreign_key "reservations", "restaurants"
   add_foreign_key "reservations", "users"
-  add_foreign_key "reviews", "restaurants", column: "restaurants_id"
-  add_foreign_key "reviews", "users", column: "users_id"
+  add_foreign_key "reviews", "restaurants"
+  add_foreign_key "reviews", "users"
 end

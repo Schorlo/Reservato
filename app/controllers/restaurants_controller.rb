@@ -1,5 +1,6 @@
 class RestaurantsController < ApplicationController
-    skip_before_action :should_authenticate_customer!, only: [:index, :show]
+    # skip_before_action :should_authenticate_customer!, only: [:index, :show]
+
   def index
     @restaurants = Restaurant.all
 
@@ -27,7 +28,7 @@ class RestaurantsController < ApplicationController
 
   private
 
-  def reystaurant_params
+  def restaurant_params
     params.require(:restaurant).permit(:category, :name, :city, :category)
   end
 end

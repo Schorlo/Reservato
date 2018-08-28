@@ -1,0 +1,34 @@
+<div class="white-wrapper">
+  <div class="container">
+    <%= render "shared/smallbanner" %>
+    <h1><%= @restaurant.name %></h1>
+    <div class="row">
+      <ul>
+        <li><%= @restaurant.category %></li>
+        <li><%= @restaurant.email %></li>
+        <li><%= @restaurant.phone %></li>
+        <li><%= @restaurant.address %></li>
+        <li><%= @restaurant.city %></li>
+        <li><%= @restaurant.country %></li>
+      </ul>
+
+      <% @restaurant.reviews.each do |review| %>
+      <div class="card">
+
+      </div>
+      <div class="rating">
+      <%= review.rating %>
+      </div>
+      <% end %>
+
+      <%= cl_image_tag @restaurant.pictures.first, class: "img-tag-card" %>
+
+    <div>
+    <%= link_to "Reserve now", restaurants_reviews_path, class: "btn btn-primary" %>
+    </div>
+
+    </div>
+    <%= link_to "Back", root_path %>
+    <%= render "shared/maps" %>
+  </div>
+</div>

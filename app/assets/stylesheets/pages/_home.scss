@@ -1,12 +1,17 @@
+.white-wrapper {
+}
+
 .banner {
   padding: 250px;
   color: white;
   text-align: center;
   height: 100vh;
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  /* if you have
+  a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 .banner h1 {
   align: top;
@@ -26,6 +31,6 @@
   display: flex;
   justify-content: center;
   form {
-    display: flex;
+  display: flex;
   }
 }// Specific CSS for your home-page

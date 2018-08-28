@@ -61,16 +61,16 @@ reservation4.save!
 
 
 
-review = Review.new(rating: 3, content: "Great!", user: user, restaurant: restaurant)
+review = Review.new(rating: 2, content: "Great!", user: user, restaurant: restaurant)
 review.save!
 
-review2 = Review.new(rating: 3, content: "Great!", user: user2, restaurant: restaurant)
+review2 = Review.new(rating: 1, content: "Great!", user: user2, restaurant: restaurant)
 review2.save!
 
-review3 = Review.new(rating: 2, content: "Average!", user: user3, restaurant: restaurant3)
+review3 = Review.new(rating: 3, content: "Average!", user: user3, restaurant: restaurant3)
 review3.save!
 
-review4 = Review.new(rating: 3, content: "Awesome!", user: user4, restaurant: restaurant4)
+review4 = Review.new(rating: 5, content: "Awesome!", user: user4, restaurant: restaurant4)
 review4.save!
 
 url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"

@@ -8,10 +8,10 @@
 
 require "yaml"
 
-User.destroy_all
-Restaurant.destroy_all
-Review.destroy_all
 Reservation.destroy_all
+Review.destroy_all
+Restaurant.destroy_all
+User.destroy_all
 
 user = User.new(first_name: "Hans", last_name: "user1", email: 'user1@ab.com', password: "123456")
 user.save!
@@ -26,16 +26,23 @@ user4 = User.new(first_name: "Hans", last_name: "user4", email: 'user4@ab.com', 
 user4.save!
 
 
-restaurant = Restaurant.new(email: 'restaurant1@xyz.com', name: "Tim Raue", category: "french", phone: "08156666666", country: "Germany", city: "Berlin", address: "Rudi Dutschkestr.26")
+restaurant = Restaurant.new(email: 'restaurant1@xyz.com',
+                            name: "Tim Raue",
+                            category: "french",
+                            phone: "08156666666",
+                            country: "Germany",
+                            city: "Berlin",
+                            address: "Rudi Dutschkestr.26",
+                            remote_photo_url: "https://www.top10berlin.de/sites/top10berlin.de/files/list/2016/06/17/restaurant_le_faubourg1.jpg")
 restaurant.save!
 
-restaurant2 = Restaurant.new(email: 'restaurant2@xyz.com', name: "McD Ostbahnhof", category: "Burger", phone: "081573223", country: "Germany", city: "Berlin", address: "Am Ostbahnhof 9")
+restaurant2 = Restaurant.new(email: 'restaurant2@xyz.com', name: "McD Ostbahnhof", category: "Burger", phone: "081573223", country: "Germany", city: "Berlin", address: "Am Ostbahnhof 9", remote_photo_url: "https://www.top10berlin.de/sites/top10berlin.de/files/styles/juicebox/public/location/slider/2017/11/02/top10berlin_brasserie-colette-tim-raue_nils-hasenau001.jpg?itok=3dgweDNz")
 restaurant2.save!
 
-restaurant3 = Restaurant.new(email: 'restaurant3@xyz.com', name: "McD Hermannplatz", category: "Burger", phone: "081573223", country: "Germany", city: "Berlin", address: "Hermannpl. 2-3")
+restaurant3 = Restaurant.new(email: 'restaurant3@xyz.com', name: "McD Hermannplatz", category: "Burger", phone: "081573223", country: "Germany", city: "Berlin", address: "Hermannpl. 2-3", remote_photo_url: "https://www.top10berlin.de/sites/top10berlin.de/files/list/2016/06/17/restaurant_le_faubourg1.jpg")
 restaurant3.save!
 
-restaurant4 = Restaurant.new(email: 'restaurant4@xyz.com', name: "McD Alexanderplatz", category: "Burger", phone: "081573223", country: "Germany", city: "Berlin", address: "Karl-Liebknecht-Str. 13")
+restaurant4 = Restaurant.new(email: 'restaurant4@xyz.com', name: "McD Alexanderplatz", category: "Burger", phone: "081573223", country: "Germany", city: "Berlin", address: "Karl-Liebknecht-Str. 13", remote_photo_url: "https://www.top10berlin.de/sites/top10berlin.de/files/list/2016/06/17/restaurant_le_faubourg1.jpg")
 restaurant4.save!
 
 
@@ -65,3 +72,7 @@ review3.save!
 
 review4 = Review.new(rating: 3, content: "Awesome!", user: user4, restaurant: restaurant4)
 review4.save!
+
+url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
+restaurant.remote_photo_url = url
+restaurant.save!

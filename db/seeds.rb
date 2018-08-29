@@ -28,7 +28,7 @@ user4.save!
 
 restaurant = Restaurant.new(email: 'restaurant1@xyz.com',
                             name: "Tim Raue",
-                            category: "french",
+                            category: "Asian Fusion",
                             phone: "08156666666",
                             country: "Germany",
                             city: "Berlin",

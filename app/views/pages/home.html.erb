@@ -1,28 +1,29 @@
 <div class="white-wrapper">
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cdn.theculturetrip.com/images/56-4002495-1447103707d2fe7821aad045159ea175392961027a.jpg')">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cdn.theculturetrip.com/images/56-4002495-1447103707d2fe7821aad045159ea175392961027a.jpg')">
 
 
-        <div class="banner-content">
-          <h1>Book a table for every occasion</h1>
-          <p><span id="banner-typed-text"></span></p>
-        </div>
+    <div class="banner-content">
+      <h1>Book a table for every occasion</h1>
+      <p><span id="banner-typed-text"></span></p>
+    </div>
 
-        <div class="banner-search">
-          <!-- <div class="form-wrapper"> -->
-           <%= simple_form_for :search, method: "get", html: { class: "form-inline"} do |f| %>
-           <%= f.input :starts_at, as: :string, required: false, label: false, placeholder: "12 March...", input_html: {class: "datepicker"} %>
-           <%= f.input :city, as: :string, required: false, label: false, placeholder: "Berlin..." %>
-           <%= f.button :submit, "Go", class: "btn btn-primary" %>
-           <% end %>
-         </div>
+    <div class="banner-search">
+      <!-- <div class="form-wrapper"> -->
+       <%= simple_form_for :search, method: "get", url: restaurants_path, html: { class: "form-inline"} do |f| %>
+       <%= f.input :city, as: :string, required: false, label: false, placeholder: "Berlin..." %>
+       <%= f.submit "Go", class: "btn btn-primary" %>
+       <% end %>
      </div>
-    <div class="container">
-      <br>
+   </div>
+   <div class="container">
      <%= render "shared/card" %>
      <%= render "shared/maps" %>
-  </div>
-</div>
+   </div>
+ </div>
 
-<%= render "shared/footer" %>
+
+
+
+ <%= render "shared/footer" %>
 

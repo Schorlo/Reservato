@@ -4,8 +4,8 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
 
-    if params[:query].present?
-      @restaurants = Restaurant.where.not(latitude: nil, longitude: nil).search_by_name(params[:query])
+    if params[:search] && params[:search][:city].present?
+      @restaurants = Restaurant.where.not(latitude: nil, longitude: nil).where(city: params[:search][:city])
     else
       @restaurants = Restaurant.where.not(latitude: nil, longitude: nil)
     end

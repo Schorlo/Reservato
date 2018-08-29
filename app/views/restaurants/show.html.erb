@@ -1,7 +1,6 @@
 <div class="white-wrapper">
-
-  <div class="container">
   <%= render "shared/smallbanner" %>
+  <div class="container">
     <h1><%= @restaurant.name %></h1>
     <div class="row" class="flex-container">
       <div class="flex-item">
@@ -13,7 +12,7 @@
         <p>🇩🇪 <%= @restaurant.country %></p>
         <p><%= link_to "Back", root_path %></p>
       </div>
-      <div class="flex-item">
+      <div class="flex-item" class="restaurant-show-image">
         <%= cl_image_tag(@restaurant.photo) %>
       </div>
     </div>

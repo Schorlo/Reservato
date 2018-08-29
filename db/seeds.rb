@@ -28,7 +28,7 @@ user4.save!
 
 restaurant = Restaurant.new(email: 'restaurant1@xyz.com',
                             name: "Tim Raue",
-                            category: "french",
+                            category: "Asian Fusion",
                             phone: "08156666666",
                             country: "Germany",
                             city: "Berlin",
@@ -73,6 +73,6 @@ review3.save!
 review4 = Review.new(rating: 5, content: "Awesome!", user: user4, restaurant: restaurant4)
 review4.save!
 
-url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
-restaurant.remote_photo_url = url
-restaurant.save!
+# url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
+# restaurant.remote_photo_url = url
+# restaurant.save!

@@ -11,13 +11,12 @@
 
         <div class="banner-search">
           <!-- <div class="form-wrapper"> -->
-           <%= simple_form_for :search, method: "get", html: { class: "form-inline"} do |f| %>
-           <%= f.input :starts_at, as: :string, required: false, label: false, placeholder: "12 March...", input_html: {class: "datepicker"} %>
-           <%= f.input :city, as: :string, required: false, label: false, placeholder: "Berlin..." %>
-           <%= f.button :submit, "Go", class: "btn btn-primary" %>
+           <%= simple_form_for :search, method: "get", url: restaurants_path, html: { class: "form-inline"} do |f| %>
+             <%= f.input :city, as: :string, required: false, label: false, placeholder: "Berlin..." %>
+             <%= f.submit "Go", class: "btn btn-primary" %>
            <% end %>
-         </div>
-     </div>
+        </div>
+</div>
      <%= render "shared/card" %>
      <%= render "shared/maps" %>
   </div>

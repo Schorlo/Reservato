@@ -1,7 +1,6 @@
 <div class="white-wrapper">
 
   <div class="container">
-  <%= render "shared/smallbanner" %>
     <h1><%= @restaurant.name %></h1>
     <div class="row" class="flex-container">
       <div class="flex-item">
@@ -13,10 +12,21 @@
         <p>🇩🇪 <%= @restaurant.country %></p>
         <p><%= link_to "Back", root_path %></p>
       </div>
+      <div class="flex-box">
+        <a href="#" class="btn-medium">Write a review</a>
+        <a href="#" class="btn-treehouse">See Reviews</a>
+          <div class="banner-search">
+           <%= simple_form_for :search, method: "get", html: { class: "form-inline"} do |f| %>
+           <%= f.input :starts_at, as: :string, required: false, label: false, placeholder: "Book-now...", input_html: {class: "datepicker"} %>
+           <%= f.button :submit, "Go", class: "btn btn-primary" %>
+          <% end %>
+          </div>
+      </div>
+
       <div class="flex-item">
         <%= cl_image_tag(@restaurant.photo) %>
       </div>
-    </div>
+      </div>
 
 
       <% @restaurant.reviews.each do |review| %>

@@ -14,7 +14,12 @@
   box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
 }
 
-
+.card{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+}
 .card-category {
  position: absolute;
  top: 10px;
@@ -25,13 +30,11 @@
  }
 
 .card-name {
- font-size: 40px;
- text-align: center;
- color: white;
- position: absolute;
- left: 14px;
- top: 13px;
- }
+  color: white;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+}
 
  .card-address {
   font-size: 14px;
@@ -44,7 +47,10 @@
     margin-right: 8px;
   }
   // i edits only the icon inside the div
- }
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
 
  .card-link{
   position: absolute;

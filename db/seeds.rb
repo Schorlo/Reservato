@@ -50,13 +50,13 @@ restaurant4.save!
 reservation = Reservation.new(datetime: DateTime.new(2018,8,27), user: user, seats: 1, comment: "i am allergic", restaurant: restaurant)
 reservation.save!
 
-reservation2 = Reservation.new(datetime: DateTime.new(2018,8,27), user: user2, seats: 2, comment: "Great!", restaurant: restaurant2)
+reservation2 = Reservation.new(datetime: DateTime.new(2018,8,27), user: user2, seats: 2, comment: "No Fish!", restaurant: restaurant2)
 reservation2.save!
 
-reservation3 = Reservation.new(datetime: DateTime.new(2018,8,27), user: user3, seats: 3, comment: "Shit!", restaurant: restaurant3)
+reservation3 = Reservation.new(datetime: DateTime.new(2018,8,27), user: user3, seats: 3, comment: "I am in a Wheelchair!", restaurant: restaurant3)
 reservation3.save!
 
-reservation4 = Reservation.new(datetime: DateTime.new(2018,8,27), user: user4, seats: 4, comment: "Nice!", restaurant: restaurant4)
+reservation4 = Reservation.new(datetime: DateTime.new(2018,8,27), user: user4, seats: 4, comment: "I stink!", restaurant: restaurant4)
 reservation4.save!
 
 

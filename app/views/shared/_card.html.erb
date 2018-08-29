@@ -1,22 +1,23 @@
 <div class="white-wrapper">
-  <div class="flex-container">
-    <div class="row">
+  <div class="flexbox">
+    <div class="flex-item">
+
       <% @restaurants.each do |restaurant| %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path(restaurant.photo) %> );">
-          <%# if restaurant.picture_url %>
-          <%# cl_image_tag restaurant.photo %>
-            <%#= image_tag restaurant.picture_url, class: "img-tag-card" %>
-          <%# end %>
-          <div class="card-category"><%= restaurant.category %></div>
-          <div class="card-name"><h2><%= restaurant.name %></h2></div>
-          <div class="card-address">
-            <p><%= restaurant.address %></p>
-            <p><%= restaurant.city %></p>
-          </div>
-          <%= link_to "Details", restaurant_path(restaurant), class: 'card-link' %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path(restaurant.photo) %> );">
+        <%# if restaurant.picture_url %>
+        <%# cl_image_tag restaurant.photo %>
+        <%#= image_tag restaurant.picture_url, class: "img-tag-card" %>
+        <%# end %>
+        <div class="card-category"><%= restaurant.category %></div>
+        <div class="card-name"><h2><%= restaurant.name %></h2></div>
+        <div class="card-address">
+          <p><%= restaurant.address %>, <%= restaurant.city %></p>
         </div>
-        <br>
+        <%= link_to "Details", restaurant_path(restaurant), class: 'card-link' %>
+      </div>
+      <br>
       <% end %>
+
     </div>
   </div>
 </div>

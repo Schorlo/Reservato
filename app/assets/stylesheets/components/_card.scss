@@ -1,47 +1,36 @@
-.card-restaurant {
-  background-size: cover;
-  position:relative;
-  height: 200px;
-  margin-right: auto;
-  margin-left: auto;
+.flexbox{
+  display: flex;
+  justify-content: space-around;
 }
 
-.card-restaurant-show {
-  width: 500px;
-  padding: 30px;
-  margin-right: 150px;
-  background-color: white;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+.flex-item{
+  display: flex;
+  margin: 10px;
+  flex-wrap: wrap;
 }
 
 .card{
+
   position: relative;
   width: 300px;
   height: 300px;
   margin: 20px;
 }
-.card-category {
- position: absolute;
- top: 10px;
- left: 10px;
- font-size: 15px;
- text-transform: uppercase;
- color: white;
- }
+
 
 .card-name {
   color: white;
   position: absolute;
   top: 50px;
-  text-align: center;
+
+.card-category{
+  color: white;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
- .card-address {
-  font-size: 14px;
-  position: absolute;
-  display: flex;
-  bottom: 80px;
-  left: 14px;
+.card-address{
   color: white;
   i {
     margin-right: 8px;
@@ -50,88 +39,138 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+
 }
 
- .card-link{
+.card-link{
+  color: white;
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
  }
 
 .card-link:hover {
- opacity: 1;
+  opacity: 1;
  }
 
 
-  .img-tag-card {
-  position: absolute;
+// .card-restaurant {
+//   background-size: cover;
+//   position:relative;
+//   height: 200px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
- }
+// .card-restaurant-show {
+//   width: 500px;
+//   padding: 30px;
+//   margin-right: 150px;
+//   background-color: white;
+//   box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+// }
+
+// .card-category {
+//  position: absolute;
+//  top: 10px;
+//  left: 10px;
+//  font-size: 15px;
+//  text-transform: uppercase;
+//  color: white !important;
+//  }
+
+// .card-name {
+//  font-size: 40px;
+//  text-align: center;
+//  color: white;
+//  position: absolute;
+//  left: 14px;
+//  top: 13px;
+//  }
+
+//  .card-address {
+//   font-size: 14px;
+//   position: absolute;
+//   display: flex;
+//   bottom: 80px;
+//   left: 14px;
+//   color: white;
+//   i {
+//     margin-right: 8px;
+//   }
+//   // i edits only the icon inside the div
+//  }
 
 
-.card {
-background-color: #EDEDED;
-}
 
-.card-reservation {
-  background-color: #EDEDED;
-  padding: 20px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
-}
+//   .img-tag-card {
+//   position: absolute;
 
-.card-reservation-show {
-  background-color: white;
-  padding: 15px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
-}
+//  }
 
-.card-chef {
-  background-color: #EDEDED;
-  padding: 20px;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
 
-}
+// .card {
+// background-color: #EDEDED;
+// }
 
-.card-reviews {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  background-color: white;
-  box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
-  padding-top: 1px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-}
+// .card-reservation {
+//   background-color: #EDEDED;
+//   padding: 20px;
+//   box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+// }
 
-.white-wrapper {
-  margin-top: 20px;
-}
+// .card-reservation-show {
+//   background-color: white;
+//   padding: 15px;
+//   box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+// }
 
-.btn-medium {
-  color: #999999;
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-}
-.btn-medium:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #999999;
-}
-.btn-treehouse {
-  color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: #6AD58B;
-  transition: background 0.3s ease;
-}
-.btn-treehouse:hover {
-  opacity: 1;
-  background: #3ac162;
-  text-decoration: none;
-  color: white;
-}
+// .card-chef {
+//   background-color: #EDEDED;
+//   padding: 20px;
+//   box-shadow: 1px 2px 4px rgba(0, 0, 0, .2);
+
+// }
+
+// .card-reviews {
+//   margin-top: 50px;
+//   margin-bottom: 50px;
+//   background-color: white;
+//   box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+//   padding-top: 1px;
+//   padding-bottom: 10px;
+//   padding-left: 15px;
+// }
+
+// .white-wrapper {
+//   margin-top: 20px;
+// }
+
+// .btn-medium {
+//   color: #999999;
+//   border: 1px solid #999999;
+//   padding: 10px 15px;
+//   border-radius: 50px;
+//   font-weight: lighter;
+//   opacity: 0.6;
+// }
+// .btn-medium:hover {
+//   opacity: 1;
+//   text-decoration: none;
+//   color: #999999;
+// }
+// .btn-treehouse {
+//   color: white;
+//   padding: 10px 15px;
+//   border-radius: 4px;
+//   font-weight: bold;
+//   background: #6AD58B;
+//   transition: background 0.3s ease;
+// }
+// .btn-treehouse:hover {
+//   opacity: 1;
+//   background: #3ac162;
+//   text-decoration: none;
+//   color: white;
+// }
 

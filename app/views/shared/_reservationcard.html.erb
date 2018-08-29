@@ -1,0 +1,16 @@
+<div class="white-wrapper">
+  <div class="flexbox">
+    <div class="reservation-action">
+      <% @reservations.each do |reservation| %>
+
+        <div class="reservationcard">
+          <div>🍽: <%= reservation.restaurant.name %></div>
+          <div>👫: <%= reservation.seats %></div>
+          <div>🕗: <%= reservation.seats %></div>
+          <div>💬: "<%= reservation.comment %>"</div>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

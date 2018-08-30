@@ -12,7 +12,7 @@ class ReservationsController < ApplicationController
 
   def create
     @restaurant = Restaurant.find(params[:restaurant_id])
-    @reservation = Reservation.new(reservation_params)
+    @reservation = Reservation.new(reservations_params)
     @reservation.restaurant = @restaurant
     @reservation.user = current_user
     if @reservation.save
@@ -30,16 +30,17 @@ class ReservationsController < ApplicationController
 
   private
 
-
-
-  def reservation_params
-    params.require(:reservation).permit(:comment, :datetime, :seats)
-  end
-    private
-
   def reservations_params
 
     params.require(:reservation).permit(:datetime, :user, :comment, :restaurant)
 
   end
 end
+
+
+  # private
+
+  # def reservation_params
+  #   params.require(:reservation).permit(:comment, :datetime, :seats)
+  # end
+

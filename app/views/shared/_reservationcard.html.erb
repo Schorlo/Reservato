@@ -6,8 +6,10 @@
         <div class="reservationcard">
           <div>🍽: <%= reservation.restaurant.name %></div>
           <div>👫: <%= reservation.seats %></div>
-          <div>🕗: <%= reservation.seats %></div>
-          <div>💬: "<%= reservation.comment %>"</div>
+          <% if !reservation.datetime.nil? %>
+          <div>🕗: <%= reservation.datetime.strftime('%A, %b %d')  %></div>
+          <% end %>
+          <div>💬: <%= reservation.comment %>"</div>
         </div>
 
       <% end %>

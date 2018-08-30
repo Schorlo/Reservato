@@ -35,4 +35,11 @@ class ReservationsController < ApplicationController
   def reservation_params
     params.require(:reservation).permit(:comment, :datetime, :seats)
   end
+    private
+
+  def reservations_params
+
+    params.require(:reservation).permit(:datetime, :user, :comment, :restaurant)
+
+  end
 end

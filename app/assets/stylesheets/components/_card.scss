@@ -10,11 +10,18 @@
 }
 
 .card{
-  position:relative;
+
+  position: relative;
   width: 300px;
   height: 300px;
   margin: 20px;
 }
+
+
+.card-name {
+  color: white;
+  position: absolute;
+  top: 50px;
 
 .card-category{
   color: white;
@@ -23,14 +30,16 @@
   left: 10px;
 }
 
-.card-name{
-  color: white;
-  text-align: center;
-}
-
 .card-address{
   color: white;
-  text-align: center;
+  i {
+    margin-right: 8px;
+  }
+  // i edits only the icon inside the div
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
 }
 
 .card-link{

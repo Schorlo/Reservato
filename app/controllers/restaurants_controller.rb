@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
 
     def show
     @restaurant = Restaurant.find(params[:id])
-
+    @reservation = Reservation.new
     @markers = [{
       lat: @restaurant.latitude,
       lng: @restaurant.longitude

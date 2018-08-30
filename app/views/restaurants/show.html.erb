@@ -14,26 +14,24 @@
       </div>
 
       <div class="flex-box">
-        <a href="#" class="btn-medium">Write a review</a>
-        <a href="#" class="btn-treehouse">See Reviews</a>
+        <%= link_to "write review", new_restaurant_review_path(@restaurant), class: "btn-medium" %>
+        <%= render "reservations/form", restaurant: @restaurant, reservation: @reservation %>
+      </div>
 
-    <%= render "reservations/form", restaurant: @restaurant, reservation: @reservation %>
-     </div>
 
-     <div class="flex-item">
-      <%= cl_image_tag(@restaurant.photo) %>
+      <div class="flex-item">
+        <%= cl_image_tag(@restaurant.photo) %>
+      </div>
     </div>
+
+    <% @restaurant.reviews.each do |review| %>
+    <div class="rating">
+      <%= review.rating %>
+    </div>
+    <% end %>
+
+    <%= render "shared/maps" %>
   </div>
-
-  <% @restaurant.reviews.each do |review| %>
-  <div class="rating">
-    <%= review.rating %>
-  </div>
-  <% end %>
-
-
-  <%= render "shared/maps" %>
-</div>
 
 
 </div>

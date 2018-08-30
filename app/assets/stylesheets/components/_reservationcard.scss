@@ -4,7 +4,6 @@ display: flex;
 
 .reservationcard {
   position: relative;
-
   margin: 20px;
   color: white;
   background-color: #5499C7;
@@ -12,7 +11,19 @@ display: flex;
   padding: 10px;
 }
 
-.btn-treehouse{
-  position: absolute;
-  margin: 5px;
+.btn-delete{
+  color: #5499C7;
+  padding: 10px 15px;
+  margin: 20px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+  background: black;
+  text-decoration: none;
+  color: white;
 }

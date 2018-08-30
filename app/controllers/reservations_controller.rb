@@ -3,6 +3,7 @@ class ReservationsController < ApplicationController
   def index
     @user = current_user
     @reservations = Reservation.all.where(user_id: @user.id)
+    @restaurant_reservation_path
   end
 
   def new
@@ -16,7 +17,7 @@ class ReservationsController < ApplicationController
     @reservation.restaurant = @restaurant
     @reservation.user = current_user
     if @reservation.save
-      redirect_to restaurant_path(@restaurant)
+      redirect_to restaurant_reservations_path(@restaurant)
     else
       render :new
     end
@@ -26,6 +27,7 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
+    redirect_to restaurant_reservations_path
   end
 
   private

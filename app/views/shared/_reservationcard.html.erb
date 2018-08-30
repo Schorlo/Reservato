@@ -9,7 +9,10 @@
           <% if !reservation.datetime.nil? %>
           <div>🕗: <%= reservation.datetime.strftime('%A, %b %d')  %></div>
           <% end %>
-          <div>💬: <%= reservation.comment %>"</div>
+          <div>💬: "<%= reservation.comment %>"</div>
+          <br>
+          <br>
+          <div><%= link_to "Delete", restaurant_reservation_path(reservation.restaurant, reservation), class: "btn-delete", method: :delete %></div>
         </div>
 
       <% end %>

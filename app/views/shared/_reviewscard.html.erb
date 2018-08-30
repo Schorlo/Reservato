@@ -1,0 +1,12 @@
+<div class="white-wrapper">
+  <div class="flexbox">
+    <div class="reservation-action">
+      <% @reviews.each do |review| %>
+        <div class="reservationcard">
+          <div>🏅: <%= review.restaurant.rating %></div>
+          <div>💬: <%= review.content %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

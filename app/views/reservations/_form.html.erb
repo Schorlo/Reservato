@@ -1,6 +1,0 @@
-<div class="banner-search">
-  <%= simple_form_for [restaurant, reservation] do |f| %>
-  <%= f.input :datetime, as: :string, required: false, label: false, placeholder: "Book-now...", input_html: {class: "datepicker"} %>
-  <%= f.button :submit, "Go", class: "btn btn-primary" %>
-  <% end %>
-</div>

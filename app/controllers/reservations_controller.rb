@@ -20,7 +20,6 @@ class ReservationsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def destroy

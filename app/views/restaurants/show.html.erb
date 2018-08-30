@@ -16,12 +16,8 @@
       <div class="flex-box">
         <a href="#" class="btn-medium">Write a review</a>
         <a href="#" class="btn-treehouse">See Reviews</a>
-        <div class="banner-search">
-         <%= simple_form_for :search, method: "get", html: { class: "form-inline"} do |f| %>
-         <%= f.input :starts_at, as: :string, required: false, label: false, placeholder: "Book-now...", input_html: {class: "datepicker"} %>
-         <%= f.button :submit, "Go", class: "btn btn-primary" %>
-         <% end %>
-       </div>
+
+    <%= render "reservations/form", restaurant: @restaurant, reservation: @reservation %>
      </div>
 
      <div class="flex-item">
